@@ -1,3 +1,4 @@
+import { ThreeDots } from 'react-loader-spinner';
 import styled from 'styled-components';
 
 export const List = styled.ul`
@@ -22,19 +23,20 @@ export const Item = styled.ul`
   width: 100%;
   padding: 20px;
   justify-content: space-around;
-    border-radius: 8px;
+  border-radius: 8px;
 `;
 
 export const Button = styled.button`
   background: #e7ecf2;
   border-width: 0;
   border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
   box-sizing: border-box;
   color: #36395a;
   cursor: pointer;
   display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-family: nunito, roboto, proxima-nova, 'proxima nova', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 16px;
@@ -52,8 +54,21 @@ export const Button = styled.button`
   &:hover,
   &:active {
     background-color: initial;
-  background-position: 0 0;
-  color: #FF4742;
-  opacity: .5;
+    background-position: 0 0;
+    color: #ff4742;
+    opacity: 0.5;
   }
 `;
+
+export const threeDots = (
+  <ThreeDots
+    height="80"
+    width="80"
+    radius="9"
+    color="#a7b1ba"
+    ariaLabel="three-dots-loading"
+    wrapperStyle={{}}
+    wrapperClassName=""
+    visible={true}
+  />
+);

@@ -5,6 +5,7 @@ import { selectFilter } from 'redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 export const Filters = () => {
   const filter = useSelector(selectFilter);
+  console.log(filter);
   const dispatch = useDispatch();
   const changeFilter = newFilter => {
     dispatch(filterContact(newFilter));

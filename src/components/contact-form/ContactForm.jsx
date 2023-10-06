@@ -27,11 +27,12 @@ export const ContactForm = () => {
       alert(`${name} is already in contacts.`);
       return;
     }
+    dispatch(addContact({ id: nanoid(), name, number }));
   };
   const handleOnSubmitForm = event => {
     event.preventDefault();
     handleContactsAdd({ id: nanoid(), name, number });
-    dispatch(addContact({ id: nanoid(), name, number }));
+
     reset();
   };
 
