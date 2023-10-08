@@ -19,6 +19,9 @@ export const ContactForm = () => {
 
   const handleContactsAdd = newContact => {
     const { name } = newContact;
+  };
+  const handleOnSubmitForm = event => {
+    event.preventDefault();
     const isNameContain = contacts.find(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
@@ -28,10 +31,6 @@ export const ContactForm = () => {
       return;
     }
     dispatch(addContact({ id: nanoid(), name, number }));
-  };
-  const handleOnSubmitForm = event => {
-    event.preventDefault();
-    handleContactsAdd({ id: nanoid(), name, number });
 
     reset();
   };
