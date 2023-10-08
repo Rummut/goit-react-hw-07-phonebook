@@ -17,9 +17,6 @@ export const ContactForm = () => {
     name === 'number' && setNumber(value);
   };
 
-  const handleContactsAdd = newContact => {
-    const { name } = newContact;
-  };
   const handleOnSubmitForm = event => {
     event.preventDefault();
     const isNameContain = contacts.find(
